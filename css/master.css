@@ -1,0 +1,159 @@
+body {
+	background: #eee;
+	font-size: 62.5%; /* 10px/16px */
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+img {
+	min-width: 100%;
+}
+p {
+	font-size: 1.6em;
+	line-height: 1.5;
+	margin-bottom: 1em;
+}
+a {
+	border-bottom: 1px solid #d71c14;
+	color: #d71c14;
+	text-decoration: none;
+
+	-webkit-transition: border 0.5s, color 0.5s;
+	        transition: border 0.5s, color 0.5s;
+}
+a:hover {
+	border-color: #0c3469;
+	color: #0c3469;
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+ * H E A D E R * H E A D E R * H E A D E *  
+ * * * * * * * * * * * * * * * * * * * * */
+header {
+	padding: 40px 0 0;
+}
+.logo {
+	background: url('../img/logo.gif') no-repeat 0 0 #fff;
+	display: block;
+	max-width: 478px;
+}
+.logo-subtitle {
+	font-size: 3.6em;
+}
+
+.page-container {
+	background: #fff;
+	border-left: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+	margin: 0 auto;
+	max-width: 1400px;
+	padding: 0 80px;
+	width: 60%;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+ * N A V * N A V * N A V * N A V * N A V *
+ * * * * * * * * * * * * * * * * * * * * */
+.navigation ul {
+	margin: 60px 0 40px;
+}
+.navigation ul {
+	text-align: center;
+}
+.navigation li {
+	display: inline-block;
+}
+.navigation li a {
+	border: 0;
+	color: #000;
+	font-size: 2.2em;
+	display: block;
+	margin-left: .8em;
+	padding: 0.2em;
+	text-decoration: none;
+}
+.navigation li a:hover {
+	color: #d71c14;
+}
+.navigation li:first-child a {
+	margin-left: 0;
+}
+.after-nav {
+	border: 0;
+	border-top: 2px solid #000;
+	display: block;
+	margin: 0 auto;
+	width: 26%;
+}
+
+/*--------------------------------------
+ * Announcement         
+ *--------------------------------------*/
+.announcement {
+	border: 2px solid #d71c14;
+	margin: 40px auto;
+	padding: 2em;
+	width: 40%;
+}
+.announcement h3 {
+	color: #d71c14;
+	font-size: 1.8em;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+.announcement p:last-of-type {
+	margin-bottom: 0;
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+ * C O N T E N T * C O N T E N T * C O N *
+ * * * * * * * * * * * * * * * * * * * * */
+.content {
+	margin: 40px 0 0;
+}
+.content article {
+	margin-bottom: 4em;
+}
+.content h3 {
+	border-bottom: 1px solid #000;
+	font-size: 2.8em;
+	line-height: 1.5;
+	margin: 1em 0;
+}
+.content h4 {
+	font-size: 2em;
+	line-height: 1.5;
+	margin: 2em 0 1em;
+}
+.content h4 a {
+	border: 0;
+}
+
+.column-1 {
+	float: left;
+	width: 45%;
+}
+.column-2 {
+	float: right;
+	width: 45%;
+}
+
+
+footer {
+	border-top: 2px solid #000;
+	margin: 80px 0 0;
+	padding: 40px 0;
+}
+footer p {
+	margin: 0;
+}
+
+
+
+.group:after {
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+}

@@ -5,7 +5,7 @@ body {
 }
 
 img {
-	min-width: 100%;
+	max-width: 100%;
 }
 p {
 	font-size: 1.6em;
@@ -30,11 +30,6 @@ a:hover {
  * * * * * * * * * * * * * * * * * * * * */
 header {
 	padding: 40px 0 0;
-}
-.logo {
-	background: url('../img/logo.gif') no-repeat 0 0 #fff;
-	display: block;
-	max-width: 478px;
 }
 .logo-subtitle {
 	font-size: 3.6em;

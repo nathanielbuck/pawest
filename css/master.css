@@ -148,6 +148,40 @@ footer p {
 	margin: 0;
 }
 
+@media screen and (max-width: 1350px) {
+	.page-container {
+		width: 80%;
+	}
+}
+@media screen and (max-width: 940px) {
+	.page-container {
+		padding: 0 4%;
+		width: 88%;
+	}
+	.navigation ul {
+		text-align: left;
+	}
+	.navigation li {
+		display: block;
+	}
+	.navigation li a {
+		margin-left: 0;
+	}
+	.after-nav {
+		width: 60%;
+	}
+	.announcement {
+		width: 80%;
+	}
+	.column-1,
+	.column-2 {
+		float: none;
+		width: 100%;
+	}
+	footer {
+		margin-top: 40px;
+	}
+}
 
 
 .group:after {

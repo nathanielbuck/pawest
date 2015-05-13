@@ -1,0 +1,267 @@
+@red: #d71c14;
+@blue: #092357;
+@body-font: "adelle-1", "adelle-2";
+@heading-font: "bebas-neue-1", "bebas-neue-2";
+
+body {
+	background: #eee;
+	font-size: 62.5%; /* 10px/16px */
+	font-family: @body-font, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+p {
+	font-size: 1.6em;
+	line-height: 1.5;
+	margin-bottom: 1em;
+}
+a {
+	border-bottom: 1px solid @red;
+	color: @red;
+	text-decoration: none;
+
+	-webkit-transition: border 0.25s, color 0.25s;
+	        transition: border 0.25s, color 0.25s;
+}
+a:hover {
+	border-color: #0c3469;
+	color: #0c3469;
+}
+
+dl {
+	font-size: 1.8em;
+	line-height: 2.4em;
+}
+dt {
+	clear: both;
+	float: left;
+	font-weight: bold;
+	width: 48%;
+}
+dd {
+	float: right;
+	width: 48%;
+}
+dl.wide {
+	dt {
+		width: 38%;
+	}
+	dd {
+		width: 58%;
+	}
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+ * H E A D E R * H E A D E R * H E A D E *  
+ * * * * * * * * * * * * * * * * * * * * */
+header .page-container {
+	padding-bottom: 60px;
+	padding-top: 40px
+}
+.home-link {
+	text-align: center;
+}
+.logo-subtitle {
+	color: #000;
+	font-size: 6.4em;
+	font-family: @heading-font;
+}
+
+.page-container {
+	background: #fff;
+	border-left: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+	margin: 0 auto;
+	max-width: 1400px;
+	padding-left: 80px;
+	padding-right: 80px;
+	width: 80%;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+ * N A V * N A V * N A V * N A V * N A V *
+ * * * * * * * * * * * * * * * * * * * * */
+.navigation {
+	background: @red
+}
+.navigation ul {
+	//margin: 0 0 40px;
+}
+.navigation ul {
+	text-align: center;
+}
+.navigation li {
+	display: inline-block;
+}
+.navigation a {
+	border: 0;
+	border-bottom: 0.3em solid @red;
+	border-top: 0.3em solid @red;
+	color: #fff;
+	display: block;
+	font-family: @heading-font;
+	font-size: 2.6em;
+	line-height: 2em;
+	padding: 0 0.5em;
+	text-decoration: none;
+
+	&:hover {
+		color: #000;
+	}
+}
+.navigation li.current_page_item a {
+	border-bottom-color: #fff;
+
+	&:hover {
+		color: #fff;
+		cursor: default;
+	}
+}
+.navigation li:first-child a {
+	margin-left: 0;
+}
+.after-nav {
+	border: 0;
+	border-top: 2px solid #000;
+	display: block;
+	margin: 0 auto;
+	width: 26%;
+}
+
+/*--------------------------------------
+ * Announcement         
+ *--------------------------------------*/
+.announcement {
+	border: 2px solid @red;
+	margin: 40px auto;
+	padding: 2em;
+	//width: 40%;
+}
+.announcement h3 {
+	color: @red;
+	font-size: 1.8em;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+.announcement p:last-of-type {
+	margin-bottom: 0;
+}
+.paramount {
+	font-size: 2.4em;
+	line-height: 1.75;
+	//margin: 0 0 1.75em;
+	//width: 50%;
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+ * C O N T E N T * C O N T E N T * C O N *
+ * * * * * * * * * * * * * * * * * * * * */
+.content .page-container {
+	padding-top: 60px;
+}
+.content article {
+	padding-bottom: 60px;
+}
+.entry-title {
+	color: @red;
+	font-family: @heading-font;
+	font-size: 4.8em;
+	text-align: center;
+}
+.content h3 {
+	color: @red;
+	font-family: @heading-font;
+	font-size: 4em;
+	line-height: 2.5em;
+	margin-top: 1em;
+}
+.content h4 {
+	font-size: 2em;
+	line-height: 1.5;
+	margin: 2em 0 1em;
+}
+.content h4 a {
+	border: 0;
+}
+
+.prominent {
+	font-size: 2.8em;
+}
+
+footer,
+footer .page-container {
+	background: @blue;
+}
+footer .page-container {
+	border: 0;
+	padding: 80px;
+}
+footer p {
+	color: #fff;
+	margin: 0;
+}
+
+/* Footer Links */
+footer .links a {
+	border: 0;
+	float: left;
+	width: 14.2857143%; 
+}
+footer .links img {
+	display: block;
+	max-height: 72px;
+	margin: 0 auto;
+}
+footer .links img.fifa {
+	border: 8px solid #fff;
+	border-radius: 2px;
+	margin-top: 16px;
+	margin-bottom: 17px;
+}
+
+@media screen and (max-width: 1350px) {
+	.page-container {
+		width: 80%;
+	}
+}
+@media screen and (max-width: 940px) {
+	.page-container {
+		padding: 0 4%;
+		width: 88%;
+	}
+	.navigation ul {
+		text-align: left;
+	}
+	.navigation li {
+		display: block;
+	}
+	.navigation li a {
+		margin-left: 0;
+	}
+	.after-nav {
+		width: 60%;
+	}
+	.announcement {
+		width: 80%;
+	}
+	.col-* {
+		float: none;
+		width: 100%;
+	}
+	footer {
+		margin-top: 40px;
+	}
+}
+
+
+.group:after {
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+}

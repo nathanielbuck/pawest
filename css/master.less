@@ -1,3 +1,5 @@
+@red: #d71c14;
+
 body {
 	background: #eee;
 	font-size: 62.5%; /* 10px/16px */
@@ -13,8 +15,8 @@ p {
 	margin-bottom: 1em;
 }
 a {
-	border-bottom: 1px solid #d71c14;
-	color: #d71c14;
+	border-bottom: 1px solid @red;
+	color: @red;
 	text-decoration: none;
 
 	-webkit-transition: border 0.5s, color 0.5s;
@@ -32,6 +34,7 @@ header {
 	padding: 40px 0 0;
 }
 .logo-subtitle {
+	color: #000;
 	font-size: 3.6em;
 }
 
@@ -61,14 +64,25 @@ header {
 .navigation li a {
 	border: 0;
 	color: #000;
-	font-size: 2.2em;
+	font-size: 2em;
 	display: block;
-	margin-left: .8em;
-	padding: 0.2em;
+	line-height: 1.4em;
+	margin: 0.25em 0;
+	padding: 0.25em 0.5em;
 	text-decoration: none;
-}
-.navigation li a:hover {
-	color: #d71c14;
+
+	&.active {
+		background: #eee;
+		border-radius: 6px;
+
+		&:hover {
+			color: #000;
+			cursor: default;
+		}
+	}
+	&:hover {
+		color: @red;
+	}
 }
 .navigation li:first-child a {
 	margin-left: 0;
@@ -85,13 +99,13 @@ header {
  * Announcement         
  *--------------------------------------*/
 .announcement {
-	border: 2px solid #d71c14;
+	border: 2px solid @red;
 	margin: 40px auto;
 	padding: 2em;
 	//width: 40%;
 }
 .announcement h3 {
-	color: #d71c14;
+	color: @red;
 	font-size: 1.8em;
 	font-weight: bold;
 	margin-bottom: 1em;
@@ -124,15 +138,9 @@ header {
 	border: 0;
 }
 
-.column-1 {
-	float: left;
-	width: 45%;
+.prominent {
+	font-size: 2.8em;
 }
-.column-2 {
-	float: right;
-	width: 45%;
-}
-
 
 footer {
 	border-top: 2px solid #000;
@@ -168,8 +176,7 @@ footer p {
 	.announcement {
 		width: 80%;
 	}
-	.column-1,
-	.column-2 {
+	.col-* {
 		float: none;
 		width: 100%;
 	}

@@ -3254,7 +3254,6 @@ function wp_maybe_load_widgets() {
 	add_action( '_admin_menu', 'wp_widgets_add_menu' );
 }
 
-
 /**
  * Append the Widgets menu to the themes main menu.
  *
@@ -4846,9 +4845,3 @@ function wp_delete_file( $file ) {
 		@unlink( $delete );
 	}
 }
-
-
-
-// =========================================================================
-// REMOVE JUNK FROM HEAD
-// =========================================================================

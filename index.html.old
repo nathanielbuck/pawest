@@ -23,10 +23,12 @@
 
 				<nav class="navigation" role="navigation">
 					<ul>
-						<li><a href="index.html">Home</a></li>
+						<li><a class="active" href="index.html">Home</a></li>
 						<li><a href="become-a-referee.html">Become a Referee</a></li>
-						<li><a href="whats-your-decision.html">What's Your Decision?</a></li>
+						<li><a href="featured-topics/">Featured Topics</a></li>
 						<li><a href="events.html">Events</a></li>
+						<li><a href="assessors.html">Assessors</a></li>
+						<li><a href="instructors.html">Instructors</a></li>
 						<li><a href="mentoring-group.html">Mentoring Group</a></li>
 						<li><a href="game-report.html">Game Report</a></li>
 						<li><a href="contact-us.html">Contact Us</a></li>

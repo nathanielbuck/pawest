@@ -14,14 +14,14 @@ get_header(); ?>
 						$cat_name = $cats[0]->name;
 				?>
 
-					<article>
+					<article class="group">
 						<div class="col-3">
-							<h4 class="main-heading main-heading--alternate main-heading--pair-first"><?php the_date('m/d/Y'); ?></h4>
-							<h4 class="main-heading main-heading--alternate main-heading--pair-last"><?php echo $cat_name; ?></h4> 
+							<h4 class="main-heading main-heading--alternate main-heading--small main-heading--flat-top main-heading--flat-bottom"><?php the_date('m/d/Y'); ?></h4>
+							<h4 class="main-heading main-heading--alternate main-heading--small main-heading--flat-top"><?php echo $cat_name; ?></h4>
 						</div>
 
 						<div class="col-9">
-							<h3 class="main-heading">
+							<h3 class="main-heading main-heading--flat-top">
 								<a href="<?php the_permalink(); ?>">
 									<?php the_title(); ?>
 								</a>
@@ -35,7 +35,12 @@ get_header(); ?>
 				</div>
 
 				<div class="col-4">
-					<h2 class="main-heading  main-heading--alternate">Categories</h2>
+					<h2 class="main-heading main-heading--alternate main-heading--flat-top">Categories</h2>
+					<ul class="heading-list">
+						<?php wp_list_categories( array(
+							title_li => ''
+						) ); ?>
+					</ul>
 				</div>
 			</div>
 		</div><!-- .page-container -->

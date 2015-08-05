@@ -1,7 +1,7 @@
 @red: #d71c14;
 @blue: #092357;
-@body-font: "adelle-1", "adelle-2";
-@heading-font: "bebas-neue-1", "bebas-neue-2";
+@body-font: "adelle-1", "adelle-2", Georgia, serif;
+@heading-font: "bebas-neue-1", "bebas-neue-2", "Helvetica Neue Condensed Bold", Trebuchet, sans-serif;
 
 body {
 	background: #eee;
@@ -239,6 +239,130 @@ header .page-container {
 	font-size: 2.8em;
 }
 
+/* * * * * * * * * * * * * * * * * * * * *
+ * F O R M * F O R M * F O R M * F O R M *
+ * * * * * * * * * * * * * * * * * * * * */
+fieldset {
+	background: #eee;
+	border-radius: 1em;
+	margin-bottom: 3.6em;
+	padding: 1em 1em 0;
+}
+legend {
+	font-size: 1.8em;
+	font-family: @heading-font;
+}
+label {
+	display: block;
+	float: left;
+	min-width: 200px;
+	width: 20%;
+}
+
+.label--block label,
+.block-label label {
+	float: none;
+	width: 100%;
+}
+.input--block input,
+.input--block textarea {
+	box-sizing: border-box;
+	width: 100%;
+}
+.input--narrow input {
+	width: 80px;
+}
+.input--multi-line {
+	display: block;
+	float: left;
+}
+form > p {
+	margin-bottom: 1em;
+}
+form > p:after {
+	.self-clear();
+}
+form > p > span {
+	display: block;
+	float: left;
+}
+input {
+	box-sizing: border-box;
+	border: 1px solid #aaa;
+	border-radius: 2px;
+	display: inline-block;
+	height: 30px;
+	padding: 6px;
+}
+input[type="submit"] {
+	background-color: @red;
+	border: 0;
+	border-radius: 6px;
+	color: #fff;
+	font-size: 1em;
+	height: auto;
+	padding: 8px 12px;
+
+	&:hover,
+	&:focus {
+		background-color: #000;
+		cursor: pointer;
+	}
+}
+// Validation
+.screen-reader-response {
+	background-color: #eee;
+	border-radius: 10px;
+	color: #000;
+	font-size: 1.8em;
+	line-height: 1.5em;
+	margin-bottom: 1em;
+	padding: 8px;
+	text-align: center;
+
+	ul {
+		display: none;
+	}
+}
+.screen-reader-response:empty {
+	display: none;
+}
+.screen-reader-response {
+	background-color: @red;
+	color: #fff;
+}
+
+[class*="not-valid"] {
+	border-color: @red;
+}
+[class*="response-output"] {
+	font-size: 1.8em;
+	line-height: 1.5em;
+
+	&[class*="validation-errors"] {
+		color: @red;
+	}
+}
+
+.half-left {
+	float: left;
+	width: 70%;
+}
+.half-right {
+	float: left;
+	margin-left: 8px;
+}
+.helptext {
+	font-style: italic;
+	font-size: (14/18) + 0em;
+}
+span[class*="not-valid-tip"] {
+	display: none;
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+ * F O O T E R * F O O T E R * F O O T E * *
+ * * * * * * * * * * * * * * * * * * * * */
 footer,
 footer .page-container {
 	background: @blue;
@@ -305,6 +429,9 @@ footer .links img.fifa {
 }
 
 .group:after {
+	.self-clear();
+}
+.self-clear () {
 	content: "."; 
 	display: block; 
 	height: 0; 

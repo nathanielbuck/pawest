@@ -12,9 +12,15 @@ body {
 img {
 	max-width: 100%;
 }
-p {
+p,
+article li {
 	font-size: 1.8em;
 	line-height: 1.66666667;
+}
+p,
+article dl,
+article ol,
+article ul {
 	margin-bottom: 1em;
 }
 a {
@@ -22,12 +28,18 @@ a {
 	color: @red;
 	text-decoration: none;
 
-	-webkit-transition: border 0.25s, color 0.25s;
-	        transition: border 0.25s, color 0.25s;
+	-webkit-transition: background 0.25s, border 0.25s, color 0.25s;
+	        transition: background 0.25s, border 0.25s, color 0.25s;
 }
 a:hover {
 	border-color: #0c3469;
 	color: #0c3469;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
 }
 
 .list li,
@@ -44,6 +56,29 @@ a:hover {
 }
 .heading-list a {
 	border: 0;
+}
+.list--inline {
+	margin-bottom: 8em;
+	text-align: center;
+}
+.list--inline li {
+	display: inline-block;
+}
+.filter a {
+	display: block;
+	padding: 0.25em 0.75em;
+}
+.filter a {
+	border-radius: 1em;
+
+	&:hover {
+		background: #eee;
+	}
+}
+.filter .filter--active,
+.filter .filter--active:hover {
+	background: @red;
+	color: #fff;
 }
 
 dl {
@@ -67,6 +102,42 @@ dl.wide {
 	dd {
 		width: 58%;
 	}
+}
+.dl-block {
+	dt,
+	dd {
+		float: none;
+		width: auto;
+	}
+	dt {
+		display: block;
+	}
+	dd {
+		display: block;
+		margin-left: 1em;
+	}
+}
+
+// Utility
+.align-left {
+	float: left;
+}
+.align-right {
+	float: right;
+}
+.align-center {
+	text-align: center;
+}
+img.align-left {
+	margin-right: 20px;
+}
+img.align-right {
+	margin-left: 20px;
+}
+img.align-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -172,6 +243,9 @@ header .page-container {
 	//margin: 0 0 1.75em;
 	//width: 50%;
 }
+.paramount--centered {
+	text-align: center;
+}
 
 /* * * * * * * * * * * * * * * * * * * * *
  * C O N T E N T * C O N T E N T * C O N *
@@ -198,6 +272,7 @@ header .page-container {
 
 	a {
 		border-bottom: 2px solid @red;
+		display: inline-block;
 		text-decoration: none;
 
 		&:hover {
@@ -219,6 +294,9 @@ header .page-container {
 	font-size: 3em;
 	line-height: 1.33333333em;
 	margin-top: 2em;
+}
+.main-heading--half-bottom {
+	margin-bottom: 0.5em;
 }
 .main-heading--flat-bottom {
 	margin-bottom: 0;
@@ -286,7 +364,8 @@ form > p > span {
 	display: block;
 	float: left;
 }
-input {
+input,
+select {
 	box-sizing: border-box;
 	border: 1px solid #aaa;
 	border-radius: 2px;
@@ -294,6 +373,7 @@ input {
 	height: 30px;
 	padding: 6px;
 }
+.button,
 input[type="submit"] {
 	background-color: @red;
 	border: 0;
@@ -306,6 +386,7 @@ input[type="submit"] {
 	&:hover,
 	&:focus {
 		background-color: #000;
+		color: #fff;
 		cursor: pointer;
 	}
 }

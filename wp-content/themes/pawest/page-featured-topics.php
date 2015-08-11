@@ -1,5 +1,6 @@
 <?php
-get_header(); ?>
+get_header();
+?>
 
 		<div class="page-container">
 			<div class="grid-row">
@@ -41,8 +42,8 @@ get_header(); ?>
 							title_li => ''
 						) ); ?>
 					</ul>
-				</div>
-			</div>
+				</div><!-- .col-12 -->
+			</div><!-- .grid-row -->
 		</div><!-- .page-container -->
 
 <!--<?php //get_sidebar(); ?>-->

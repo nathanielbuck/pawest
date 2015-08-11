@@ -9,20 +9,49 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+		<div class="page-container">
+			<div class="grid-row">
+				<?php /* The loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<div class="col-3">
+						<h2 class="main-heading main-heading--alternate main-heading--small main-heading--flat-bottom"><?php the_date('m/d/Y'); ?></h2>
+					</div>
 
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+					<div class="col-10">
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<!--
+							<header class="entry-header">
+								<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+								<div class="entry-thumbnail">
+									<?php the_post_thumbnail(); ?>
+								</div>
+								<?php endif; ?>
+							-->
 
-				<?php get_template_part( 'content', get_post_format() ); ?>
-				<?php twentythirteen_post_nav(); ?>
-				<?php comments_template(); ?>
+								<h1 class="entry-title main-heading"><?php the_title(); ?></h1>
+								<h2 class="main-heading main-heading--alternate main-heading--small main-heading--flat-top"><?php echo $cat_name; ?></h2>
 
-			<?php endwhile; ?>
+						<div class="col-3">
+						</div>
+							</header><!-- .entry-header -->
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+							<div class="entry-content">
+								<?php the_content(); ?>
+								<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+							</div><!-- .entry-content -->
 
-<?php get_sidebar(); ?>
+							<!--
+							<footer class="entry-meta">
+								<?php //edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
+							</footer>--><!-- .entry-meta -->
+						</article><!-- #post -->
+
+						<?php comments_template(); ?>
+					</div><!-- .col-10 .skip-3 -->
+				<?php endwhile; ?>
+			</div><!-- .grid-row -->
+
+		</div><!-- .page-container -->
+
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

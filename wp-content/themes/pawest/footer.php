@@ -14,5 +14,7 @@
 		</footer>
 
 	<!--<?php wp_footer(); ?>-->
+	<script src="<?php echo site_url(); ?>/wp-content/themes/pawest/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+	<script src="<?php echo site_url(); ?>/wp-content/themes/pawest/js/main.js" type="text/javascript"></script>
 </body>
 </html>

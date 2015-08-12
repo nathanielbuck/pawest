@@ -6,7 +6,7 @@ get_header();
 			<div class="grid-row">
 				<div class="col-12">
 				<?php
-					$args = array( 'posts_per_page' => 3 );
+					$args = array( 'posts_per_page' => 25 );
 					$lastposts = get_posts( $args );
 					foreach ( $lastposts as $post ) :
 						setup_postdata( $post );
@@ -28,7 +28,17 @@ get_header();
 								</a>
 							</h3>
 
-							<?php the_content(); ?>
+							<?php
+								// Display full posts, even if a page break is set.
+								global $more;
+								if ($post == $posts[0]) {
+									$more = 0;
+								}
+								else {
+									$more = 1;
+								}
+								the_content();
+							?>
 						</div>
 					</article>
 					<?php endforeach; 

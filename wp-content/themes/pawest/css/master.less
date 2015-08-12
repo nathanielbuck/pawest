@@ -294,6 +294,17 @@ header .page-container {
 	font-size: 3em;
 	line-height: 1.33333333em;
 	margin-top: 2em;
+	a {
+		border-color: #000;
+		color: #000;
+		-webkit-transition: background 0.25s, border 0.25s, color 0.25s;
+		        transition: background 0.25s, border 0.25s, color 0.25s;
+
+		&:hover {
+			border-color: @red;
+			color: @red;
+		}
+	}
 }
 .main-heading--half-bottom {
 	margin-bottom: 0.5em;
@@ -315,6 +326,23 @@ header .page-container {
 
 .prominent {
 	font-size: 2.8em;
+}
+
+// Add Posts to Page Plugin
+
+.add_posts_content {
+	img {
+		max-height: 460px;
+		max-width: 60%;
+		width: auto;
+	}
+	.readmore {
+		font-size: 1.8em;
+		line-height: 1.66666667;
+	}
+	hr {
+		display: none;
+	}
 }
 
 /* * * * * * * * * * * * * * * * * * * * *

@@ -1,5 +1,7 @@
 @red: #d71c14;
 @blue: #092357;
+@green: #4cae4c;
+@dark-green: #449d44;
 @body-font: "adelle-1", "adelle-2", Georgia, serif;
 @heading-font: "bebas-neue-1", "bebas-neue-2", "Helvetica Neue Condensed Bold", Trebuchet, sans-serif;
 
@@ -116,6 +118,12 @@ dl.wide {
 		display: block;
 		margin-left: 1em;
 	}
+}
+.list--disc {
+	list-style-type: disc;
+}
+.list--ordered {
+	list-style-type: decimal;
 }
 
 // Utility
@@ -420,14 +428,11 @@ input[type="submit"] {
 }
 // Validation
 .screen-reader-response {
-	background-color: #eee;
-	border-radius: 10px;
-	color: #000;
-	font-size: 1.8em;
-	line-height: 1.5em;
-	margin-bottom: 1em;
-	padding: 8px;
-	text-align: center;
+	height: 0;
+	left: -999em;
+	position: absolute;
+	top: -999em;
+	width: 0;
 
 	ul {
 		display: none;
@@ -436,20 +441,30 @@ input[type="submit"] {
 .screen-reader-response:empty {
 	display: none;
 }
+/*
 .screen-reader-response {
 	background-color: @red;
 	color: #fff;
 }
+*/
 
 [class*="not-valid"] {
 	border-color: @red;
 }
 [class*="response-output"] {
+	border-radius: 10px;
+	color: #fff;
 	font-size: 1.8em;
 	line-height: 1.5em;
+	margin-bottom: 1em;
+	padding: 8px;
+	text-align: center;
 
 	&[class*="validation-errors"] {
-		color: @red;
+		background: @red;
+	}
+	&[class*="mail-sent-ok"] {
+		background: @green;
 	}
 }
 
@@ -503,6 +518,7 @@ footer .links img.fifa {
 	margin-bottom: 17px;
 }
 
+/*
 @media screen and (max-width: 1350px) {
 	.page-container {
 		width: 80%;
@@ -536,6 +552,7 @@ footer .links img.fifa {
 		margin-top: 40px;
 	}
 }
+*/
 
 .group:after {
 	.self-clear();
